@@ -8,7 +8,7 @@ This project is designed to predict the bounding boxes of digits within MNIST im
 
 The project is structured as follows:
 
--   data/ \# Contains the MNIST dataset
+-   mnist/ \# Contains the MNIST dataset
 -   code/ \# Contains the main Jupyter notebook, model configurations, IOU function, and training functions
 -   README.md \# Project overview and instructions
 
@@ -53,6 +53,6 @@ Conv_Model(
 
 The metric used for evaluating the models is the Intersection Over Union (IoU). For two rectangles R1 and R2, it is defined as:
 
-![IoU Equation](https://latex.codecogs.com/svg.image?\large&space;\bg{white}&space;IoU(R_1,R_2)=\frac{A(R_1\cap&space;R_2)}{A(R_1\cup&space;R_2)}{\color{Red}}) 
+![IoU Equation](https://latex.codecogs.com/svg.image?\large&space;\bg%7Bwhite%7D&space;IoU(R_1,R_2)=\frac%7BA(R_1\cap&space;R_2)%7D%7BA(R_1\cup&space;R_2)%7D%7B\color%7BRed%7D%7D)
 
 where A represents the area of the argument.
