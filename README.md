@@ -1,24 +1,26 @@
 # Predicting bounding box with MNIST images
+
 ## Overview
 
-This project is designed to predict the bounding boxes of digits within MNIST images using a deep learning approach. We have implemented different MLP and Convolutional Neural Network (CNN) to predict the coordinates of bounding boxes surrounding the digits in the images. This project is a continuation of my assignment 1 of the Deep Learning 2023 course at Bern University. 
+This project is designed to predict the bounding boxes of digits within MNIST images using a deep learning approach. We have implemented different MLP and Convolutional Neural Network (CNN) to predict the coordinates of bounding boxes surrounding the digits in the images. This project is a continuation of my assignment 1 of the Deep Learning 2023 course at Bern University.
 
 ## Project Structure
+
 The project is structured as follows:
 
-
-- data/          # Contains the MNIST dataset
-- code/          # Contains the main Jupyter notebook, model configurations, IOU function, and training functions
-- README.md      # Project overview and instructions
-
+-   data/ \# Contains the MNIST dataset
+-   code/ \# Contains the main Jupyter notebook, model configurations, IOU function, and training functions
+-   README.md \# Project overview and instructions
 
 ## Dataset
-The dataset used for this project is the well-known MNIST dataset, which consists of grayscale images of handwritten digits. Each image is of size 28x28 pixels. 
+
+The dataset used for this project is the well-known MNIST dataset, which consists of grayscale images of handwritten digits. Each image is of size 28x28 pixels.
 
 ## Model Architecture
+
 You can find the implementations of different model architectures in the model configurations Python files located in the code/ directory. The best-performing model is a CNN with the following specifications:
 
-```python
+``` python
 Conv_Model(
   (features): Sequential(
     (0): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)),
@@ -45,18 +47,12 @@ Conv_Model(
     (4): Linear(in_features=512, out_features=4, bias=True),
   )
 )
-
 ```
 
-
 ## Evaluation
-The metric that was used for evaluating the models is the intersection over union metric. For two rectangles $R_1$ and $R_2$ it is defined as:
-        $$
-            IoU(R_1, R_2) = \frac{ A(R_1 \cap R_2)}{A(R_1 \cup R_2)},
-        $$
-        where $A$ represents the area of the argument.
 
+The metric used for evaluating the models is the Intersection Over Union (IoU). For two rectangles \(R_1\) and \(R_2\), it is defined as:
 
+![IoU Equation](https://latex.codecogs.com/svg.image?&space;IoU(R_1,R_2)=\frac{A(R_1\cap&space;R_2)}{A(R_1\cup&space;R_2)}) 
 
-
-
+where \(A\) represents the area of the argument.
