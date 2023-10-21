@@ -51,8 +51,8 @@ Conv_Model(
 
 ## Evaluation
 
-The metric used for evaluating the models is the Intersection Over Union (IoU). For two rectangles \(R_1\) and \(R_2\), it is defined as:
+The metric used for evaluating the models is the Intersection Over Union (IoU). For two rectangles R1 and R2, it is defined as:
 
-![IoU Equation](https://latex.codecogs.com/svg.image?\large&space;\bg{red}&space;IoU(R_1,R_2)=\frac{A(R_1\cap&space;R_2)}{A(R_1\cup&space;R_2)}) 
+![IoU Equation](https://latex.codecogs.com/svg.image?\large&space;\bg{white}&space;IoU(R_1,R_2)=\frac{A(R_1\cap&space;R_2)}{A(R_1\cup&space;R_2)}{\color{Red}}) 
 
-where \(A\) represents the area of the argument.
+where A represents the area of the argument.
